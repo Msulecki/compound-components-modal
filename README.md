@@ -1,6 +1,8 @@
 ## Modal component
 Modal functionality made with help of React Compound Components.
 
+[Live version on Gitpages](https://msulecki.github.io/compound-components-modal/)
+
 ### Installation
 Clone this repo:
 ```
