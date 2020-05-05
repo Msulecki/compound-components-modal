@@ -1,12 +1,12 @@
 import React from 'react';
 
 function Header(props) {
-
-    const { title, toggle } = props;
+    const title = props.title || 'Default modal title';
+    const { toggle } = props;
     return (
         <header>
             <span>{title}</span>
-            <button className="close" onClick={() => toggle(false)}>×</button>
+            <button className="close" onClick={toggle}>×</button>
         </header>
     );
 }
