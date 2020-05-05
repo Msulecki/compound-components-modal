@@ -1,30 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Modal from './Modal/Modal';
 import InnerContent from './InnerContent';
 import '../styles/App.scss';
 
 function App() {
 
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleWindow = (
-    <div className="app__toggle">
-      <button className="btn" onClick={() => setIsOpen(!isOpen)}>Open modal</button>
-    </div>
-  );
 
   const modal = (
-    <Modal toggle={setIsOpen}>
-      <Modal.Header title="Modal title" toggle={setIsOpen} />
+    <Modal>
+      <Modal.Header title="Modal title" />
       <Modal.Content>
         <InnerContent />
       </Modal.Content>
-      <Modal.Footer callToActionLabel="Action" toggle={setIsOpen} />
+      <Modal.Footer callToActionLabel="Action" />
     </Modal>
   );
 
   return (
     <div className="app">
-      {isOpen ? modal : toggleWindow}
+      {modal}
     </div>
   );
 }
